@@ -59,6 +59,13 @@ bot.on('message', msg => {
         phaseIterator = 0;
         iterationCount = 0;
         msg.channel.send("All values were reset.");
+    }else if(msg.content === "!leanbot commands"){
+        msg.channel.send("Current list of existing commands:");
+        msg.channel.send("> !leanbot start - starts the sequence or resumes it");
+        msg.channel.send("> !leanbot pause - pauses the sequence");
+        msg.channel.send("> !leanbot stop - resets the sequence and all iterations");
+        msg.channel.send("> !leanbot go - escalates the sequence by 1");
+        msg.channel.send("> !leanbot commands - prints the list of available commands");
     }
 });
 
